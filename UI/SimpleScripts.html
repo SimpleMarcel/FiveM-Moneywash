@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="SimpleScripts.css" type="text/css">
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&display=swap"
+  />
+</head>
+<body>
+    <div class="SimpleScripts-Background">
+        <div class="SimpleScripts-Box">
+            <div class="SimpleScripts-Frame">
+                <div class="SimpleScripts-Logo-P">
+            <img class="SimpleScripts-Logo" loading="lazy" alt="" src="./Bilder/Logo.png" />
+        </div>
+            <div class="SimpleScripts-EU">SimpleScripts.eu</div>
+            <div class="money-wash-wrapper">
+            <div class="SimpleScripts-Moneywash">Money Wash</div>
+        </div>
+            </div>
+            <div class="SimpleScripts-Frame-Child"></div>
+            <div class="SimpleScripts-Frame-wrapper">
+                <div class="SimpleScripts-Frame-Group">
+                    <div class="SimpleScripts-Frame-Box">
+                        <div class="SimpleScripts-Bargeld-Kreis">
+                            <div class="SimpleScripts-Bargeld-wrapper">
+                                <img class="SimpleScripts-Bargeld-Bild" loading="lazy" alt="" src="./Bilder/Bargeld.png" />
+                            </div>
+                            <div class="SimpleScripts-Bargeld-Text" id="SimpleBargeld">123.232.232$</div>
+                            <div class="SimpleScripts-Bargeld-Wrapper">
+                                <div class="SimpleScripts-Bargeld">Bargeld</div>
+                            </div>
+                        </div>
+                        <div class="SimpleScripts-Frame-wrapper1">
+                            <div class="SimpleScripts-Frame-Item"></div>
+                        </div>
+                    </div>
+                    <div class="SimpleScripts-Frame1">
+                        <div class="SimpleScripts-wrapper2">
+                            <div class="SimpleScripts-IMG-wrapper">
+                                <img class="SimpleScripts-Dreh-Bild" loading="lazy" alt="" src="./Bilder/Load.png" />
+                            </div>
+                        </div>
+                        <div class="SimpleScripts-Bargeld-Kreis2">
+                            <div class="SimpleScripts-Schwarzgeld-wrapper">
+                                <img class="SimpleScripts-Schwarzgeld-Icon" loading="lazy" alt="" src="./Bilder/SchwarzgeldIcon.png" />
+                            </div>
+                            <div class="SimpleScripts-Schwarzgeld-Text" id="SimpleSchwarzGeld">123.232.232$</div>
+                            <div class="SimpleScripts-Schwarzgeld-Wrapper">
+                                <div class="SimpleScripts-Schwarzgeld">Schwarzgeld</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="SimpleScripts-Frame-wrapper3">
+                <div class="SimpleScripts-Frame3">
+                    <div class="SimpleScripts-gebührenText-wrapper">
+                        <div class="SimpleScripts-Gebühren-Text">Die gebühren bei der Geldwäsche betragen 10%</div>
+                    </div>
+                    <div class="SimpleScripts-Frame4">
+                        <div class="SimpleScripts-Angebot1">
+                            <div class="SimpleScripts-Angebot1-Text">Angebot #1</div>
+                            <div class="SimpleScripts-Frame5">
+                                <div class="SimpleScripts-Money-wrapper">
+                                    <img class="SimpleScripts-Money-Bild" loading="lazy" alt="" src="./Bilder/Money.png" />
+                                </div>
+                                <div class="SimpleScripts-wrapper">
+                                    <div class="SimpleScripts-50K">50.000$</div>
+                                </div>
+                                <div class="SimpleScripts-OhneGebühren-wrapper">
+                                    <div class="SimpleScripts-OhneGebühren-Text">ohne Gebühren</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="SimpleScripts-Angebot2">
+                            <div class="SimpleScripts-P45"></div>
+                            <div class="SimpleScripts-Angebot2-wrapper">
+                                <div class="SimpleScripts-Angebot2-Text">Angebot #2</div>
+                            </div>
+                            <div class="SimpleScripts-Frame6">
+                                <div class="SimpleScripts-Money2-wrapper">
+                                    <img class="SimpleScripts-Money-Bild2" loading="lazy" alt="" src="./Bilder/Money.png" />
+                                </div>
+                                <div class="SimpleScripts-250K-P">
+                                    <div class="SimpleScripts-250K">250.000$</div>
+                                </div>
+                                <div class="SimpleScripts-OhneGebühren-P">
+                                    <div class="SimpleScripts-OhneGebühren-Text2">ohne Gebühren</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="SimpleScripts-Frame-wrapper4">
+                            <div class="SimpleScripts-Angebot3">
+                                <div class="SimpleScripts-Frame-Child2"></div>
+                                <div class="SimpleScripts-Angebot3-wrapper">
+                                    <div class="SimpleScripts-Angebot3-Text">Angebot #3</div>
+                                </div>
+                                <div class="SimpleScripts-Frame7">
+                                    <div class="SimpleScripts-Money3-wrapper">
+                                        <img class="SimpleScripts-Money-Bild3" loading="lazy" alt="" src="./Bilder/Money.png" />
+                                    </div>
+                                    <div class="SimpleScripts-500K">500.000$</div>
+                                </div>
+                                <div class="SimpleScripts-OhneGebühren-P2">
+                                    <div class="SimpleScripts-Angebot4-Text">ohne Gebühren</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="text" class="SimpleScripts-Betrag" placeholder="Dein Betrag" oninput="SimpleScriptsClearSelectedOffer()" onkeypress='return event.charCode >= 48 && event.charCode <= 57' onkeyup="SimpleScriptsUpdateSelectedOffer(this)">
+                    <div class="SimpleScripts-UntereBetrag-wrapper">
+                        <div class="SimpleScripts-UntereBetrag-Text">Der untere betrag beinhaltet die Gebühren</div>
+                    </div>
+                    <div class="SimpleScripts-Frame-wrapper5">
+                        <div class="SimpleScripts-MoneyFrame">
+                            <img class="SimpleScripts-MoneyIcon" loading="lazy" alt="" src="./Bilder/Money2.png" />
+                            <div class="SimpleScripts-Select-Offer">0$</div>
+                        </div>
+                    </div>
+                    <div class="SimpleScripts-Frame-wrapper6">
+                        <button id="SimpleScripts-MoneywashButton" class="besttigen-wrapper">
+                            <div class="SimpleScripts-Geld-Nehmen-Button">Bestätigen</div>
+                        </button>
+                    </div>
+                    <div class="SimpleScripts-Wähle-Angebot">
+                        <div class="SimpleScripts-P3435">
+                            <div class="SimpleScripts-P34352">
+                                <img class="SimpleScripts-Info-Icon" loading="lazy" alt="" src="./Bilder/Info.png" />
+                            </div>
+                            <div class="SimpleScripts-Wähleeinangebot-Text">Wähle ein Angebot oder trage einen eigenen Betrag ein</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="./SimpleScripts.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    $(".SimpleScripts-IMG-wrapper").click(function() {
+        $(".SimpleScripts-Dreh-Bild").toggleClass("rotate");
+    });
+});
+        
+var selectedOffer = "";
+
+$(document).ready(function() {
+    $("#SimpleScripts-MoneywashButton").click(function() {
+        $("#SimpleScripts-MoneywashButton .SimpleScripts-Geld-Nehmen-Button").css("opacity", "0");
+        $("#SimpleScripts-MoneywashButton").addClass("SimpleScripts-WBG");
+        $("#SimpleScripts-MoneywashButton").append("<div class='SimpleScripts-Loading'></div>");
+        $("#SimpleScripts-MoneywashButton").append("<div class='SimpleScripts-Overlay-Text'>Geld wird gewaschen...</div>");
+        setTimeout(function() {
+            $("#SimpleScripts-MoneywashButton .SimpleScripts-Loading").remove();
+            $("#SimpleScripts-MoneywashButton .SimpleScripts-Overlay-Text").remove();
+            $("#SimpleScripts-MoneywashButton").removeClass("SimpleScripts-WBG");
+            $("#SimpleScripts-MoneywashButton .SimpleScripts-Geld-Nehmen-Button").css("opacity", "1");
+            if (selectedOffer === "" && $(".SimpleScripts-Betrag").val() !== "") {
+                var customAmount = $(".SimpleScripts-Betrag").val();
+                var increasedAmount = Math.round(parseFloat(customAmount));
+                $.post('http://Simple_Moneywash/CustomOffer', JSON.stringify({ amount: increasedAmount })); 
+            } else if (selectedOffer !== "") {
+                if (selectedOffer === "Angebot1") {
+                    $.post('http://Simple_Moneywash/Angebot1', JSON.stringify({}));
+                } else if (selectedOffer === "Angebot2") {
+                    $.post('http://Simple_Moneywash/Angebot2', JSON.stringify({}));
+                } else if (selectedOffer === "Angebot3") {
+                    $.post('http://Simple_Moneywash/Angebot3', JSON.stringify({}));
+                }
+            }
+        }, 8000); 
+    });
+});
+
+$(document).ready(function() {
+    $(".SimpleScripts-Angebot1").click(function() {
+        selectedOffer = "Angebot1";
+        $(".SimpleScripts-Angebot2").removeClass("selected");
+        $(".SimpleScripts-Angebot3").removeClass("selected");
+        $(this).toggleClass("selected");
+        $(".SimpleScripts-Select-Offer").text("55.000$");
+        clearInput();
+    });
+
+    $(".SimpleScripts-Angebot2").click(function() {
+        selectedOffer = "Angebot2";
+        $(".SimpleScripts-Angebot1").removeClass("selected");
+        $(".SimpleScripts-Angebot3").removeClass("selected");
+        $(this).toggleClass("selected");
+        $(".SimpleScripts-Select-Offer").text("275.000$");
+        clearInput();
+    });
+
+    $(".SimpleScripts-Angebot3").click(function() {
+        selectedOffer = "Angebot3";
+        $(".SimpleScripts-Angebot1").removeClass("selected");
+        $(".SimpleScripts-Angebot2").removeClass("selected");
+        $(this).toggleClass("selected");
+        $(".SimpleScripts-Select-Offer").text("550.000$");
+        clearInput();
+    });
+});
+
+function SimpleScriptsUpdateSelectedOffer(input) {
+    var enteredValue = parseFloat(input.value);
+    if (!isNaN(enteredValue)) {
+        var increasedValue = Math.round(enteredValue * 1.1);
+        $(".SimpleScripts-Select-Offer").text("$" + increasedValue);
+        selectedOffer = "";
+    } else {
+        $(".SimpleScripts-Select-Offer").text("0$");
+    }
+}
+
+function clearInput() {
+    $(".SimpleScripts-Betrag").val("");
+}
+
+function SimpleScriptsClearSelectedOffer() {
+    $(".SimpleScripts-Angebot1").removeClass("selected");
+    $(".SimpleScripts-Angebot2").removeClass("selected");
+    $(".SimpleScripts-Angebot3").removeClass("selected");
+}
+</script>
+</body>
+</html>
